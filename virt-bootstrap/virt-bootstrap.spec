@@ -31,7 +31,7 @@ BuildRequires: python%{py_ver}-passlib
 BuildRequires: python%{py_ver}-setuptools
 BuildRequires: fdupes
 
-%if 0%{?el7}
+%if 0%{?rhel} == 7
 Requires: python-libguestfs
 %else
 Requires: python%{py_ver}-libguestfs
