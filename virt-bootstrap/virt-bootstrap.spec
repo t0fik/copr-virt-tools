@@ -19,7 +19,7 @@ Summary: System container rootfs creation tool
 
 License: GPLv3+
 URL: https://github.com/virt-manager/virt-bootstrap
-Source0: http://virt-manager.org/download/sources/virt-bootstrap/%{name}-%{version}.tar.gz
+Source0: https://virt-manager.org/download/sources/virt-bootstrap/%{name}-%{version}.tar.gz
 
 # Upstream patches
 
