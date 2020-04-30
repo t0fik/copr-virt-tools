@@ -28,7 +28,7 @@ Source0: https://virt-manager.org/download/sources/virt-bootstrap/%{name}-%{vers
 BuildRequires: /usr/bin/pod2man
 BuildRequires: /usr/bin/git
 BuildRequires: python%{py_ver}-devel
-BuildRequires: python%{py_ver}-libguestfs
+BuildRequires: %{libguestfs}
 BuildRequires: python%{py_ver}-passlib
 BuildRequires: python%{py_ver}-setuptools
 BuildRequires: fdupes
