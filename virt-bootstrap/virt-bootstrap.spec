@@ -4,12 +4,14 @@
 %global py_build %{py3_build}
 %global py_install %{py3_install}
 %global python %{__python3}
+%global libguestfs python3-libguestfs
 %else
 %global py_ver 2
 %global python_sitelib %{python2_sitelib}
 %global py_build %{py2_build}
 %global py_install %{py2_install}
 %global python %{__python2}
+%global libguestfs python-libguestfs
 %endif
 
 Name: virt-bootstrap
@@ -31,11 +33,7 @@ BuildRequires: python%{py_ver}-passlib
 BuildRequires: python%{py_ver}-setuptools
 BuildRequires: fdupes
 
-%if 0%{?rhel} == 7
-Requires: python-libguestfs
-%else
-Requires: python%{py_ver}-libguestfs
-%endif
+Requires: %{libguestfs}
 Requires: python%{py_ver}-passlib
 Requires: skopeo
 Requires: libvirt-sandbox
