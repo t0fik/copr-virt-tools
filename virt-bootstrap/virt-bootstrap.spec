@@ -14,7 +14,7 @@
 
 Name: virt-bootstrap
 Version: 1.1.1
-Release: 3%{?dist}
+Release: 7%{?dist}
 Summary: System container rootfs creation tool
 
 License: GPLv3+
@@ -79,8 +79,20 @@ done
 %{_mandir}/man1/virt-bootstrap*
 
 %changelog
-* Thu Apr 30 2020 Jerzy Drozdz <jerzy.drozdz@jdsieci.pl> - 1.1.1-3
+* Thu Apr 30 2020 Jerzy Drozdz <jerzy.drozdz@jdsieci.pl> - 1.1.1-7
 - Backport to EL7
+
+* Fri Jan 31 2020 Fedora Release Engineering <releng@fedoraproject.org> - 1.1.1-6
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
+
+* Thu Oct 03 2019 Miro Hrončok <mhroncok@redhat.com> - 1.1.1-5
+- Rebuilt for Python 3.8.0rc1 (#1748018)
+
+* Mon Aug 19 2019 Miro Hrončok <mhroncok@redhat.com> - 1.1.1-4
+- Rebuilt for Python 3.8
+
+* Mon Aug 19 2019 Miro Hrončok <mhroncok@redhat.com> - 1.1.1-3
+- Rebuilt for Python 3.8
 
 * Sat Jul 27 2019 Fedora Release Engineering <releng@fedoraproject.org> - 1.1.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
