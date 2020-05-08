@@ -1,0 +1,35 @@
+We provided two 5.1.2alpha symbols (lzma_stream_encoder_mt and
+lzma_stream_encoder_mt_memusage) before we updated to xz-5.2.2-1 in RHEL7.3.
+
+Those symbols did not change ABI in 5.2.2 so it should be safe to provide
+(except for 5.0 and 5.2 symbols) also the two 5.1.2alpha symbols and
+use 5.1.2alpha symbol version as parent for 5.2.
+
+For better reasoning look at container.h in 5.1.2alpha -- those two symbols
+were for testing purposes only, and thus not considered to be API/ABI.
+
+diff --git a/src/liblzma/liblzma.map b/src/liblzma/liblzma.map
+index f53a4ea..9c3002a 100644
+--- a/src/liblzma/liblzma.map
++++ b/src/liblzma/liblzma.map
+@@ -95,7 +95,13 @@ global:
+ 	lzma_vli_size;
+ };
+ 
+-XZ_5.2 {
++XZ_5.1.2alpha {
++global:
++	lzma_stream_encoder_mt;
++	lzma_stream_encoder_mt_memusage;
++} XZ_5.0;
++
++XZ_5.2.2 {
+ global:
+ 	lzma_block_uncomp_encode;
+ 	lzma_cputhreads;
+@@ -105,4 +111,4 @@ global:
+ 
+ local:
+ 	*;
+-} XZ_5.0;
++} XZ_5.1.2alpha;
