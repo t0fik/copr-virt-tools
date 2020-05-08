@@ -1,7 +1,7 @@
 # Not needed for f21+ and probably RHEL8+
 %{!?_licensedir:%global license %%doc}
 
-# RHEL 7 lacks %ldconfig_scriptlets macro
+# RHEL 7 lacks ldconfig_scriptlets macro
 %{!?ldconfig_scriptlets:%global ldconfig_scriptlets() %{nil}}
 
 Summary:	LZMA compression utilities
