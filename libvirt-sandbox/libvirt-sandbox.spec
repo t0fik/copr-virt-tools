@@ -26,7 +26,7 @@ BuildRequires: libselinux-devel
 BuildRequires: glib2-devel >= 2.32.0
 BuildRequires: xz-devel >= 5.0.0, xz-static
 BuildRequires: zlib-devel >= 1.2.0, zlib-static
-%if 0%{?fedora} > 27
+%if 0%{?fedora} > 27 || 0%{?rhel} > 7
 BuildRequires: libtirpc-devel
 BuildRequires: rpcgen
 %endif
