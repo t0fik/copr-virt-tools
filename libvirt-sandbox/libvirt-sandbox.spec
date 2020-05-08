@@ -16,7 +16,7 @@ Release: 6%{?dist}
 Summary: libvirt application sandbox framework
 License: LGPLv2+
 URL: http://libvirt.org/
-Source0: ftp://libvirt.org/libvirt/sandbox/%{name}-%{version}.tar.gz
+Source0: https://libvirt.org/sources/sandbox/%{name}-%{version}.tar.gz
 BuildRequires: libvirt-gobject-devel >= 0.2.1
 BuildRequires: gobject-introspection-devel
 BuildRequires: glibc-static
